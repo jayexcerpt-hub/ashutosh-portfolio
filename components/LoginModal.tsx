@@ -151,7 +151,14 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
       `}</style>
 
       {/* Animated particles background */}
-      <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none" }}>
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          overflow: "hidden",
+          pointerEvents: "none",
+        }}
+      >
         {[...Array(30)].map((_, i) => (
           <div
             key={i}
@@ -199,9 +206,11 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
             position: "relative",
             borderRadius: "2rem",
             overflow: "hidden",
-            background: "linear-gradient(160deg, rgba(15,42,26,0.98) 0%, rgba(8,28,21,0.98) 60%, rgba(6,15,10,0.98) 100%)",
+            background:
+              "linear-gradient(160deg, rgba(15,42,26,0.98) 0%, rgba(8,28,21,0.98) 60%, rgba(6,15,10,0.98) 100%)",
             border: "1px solid rgba(82,183,136,0.3)",
-            boxShadow: "0 60px 120px rgba(0,0,0,0.8), inset 0 1px 0 rgba(82,183,136,0.15), 0 0 40px rgba(82,183,136,0.1)",
+            boxShadow:
+              "0 60px 120px rgba(0,0,0,0.8), inset 0 1px 0 rgba(82,183,136,0.15), 0 0 40px rgba(82,183,136,0.1)",
             backdropFilter: "blur(10px)",
           }}
         >
@@ -211,7 +220,8 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
               position: "absolute",
               inset: 0,
               borderRadius: "2rem",
-              background: "linear-gradient(90deg, transparent, rgba(82,183,136,0.4), rgba(212,255,125,0.4), rgba(82,183,136,0.4), transparent)",
+              background:
+                "linear-gradient(90deg, transparent, rgba(82,183,136,0.4), rgba(212,255,125,0.4), rgba(82,183,136,0.4), transparent)",
               animation: "borderFlow 3s linear infinite",
               pointerEvents: "none",
             }}
@@ -222,7 +232,8 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
             style={{
               height: "1px",
               width: "100%",
-              background: "linear-gradient(to right, transparent 0%, rgba(82,183,136,0.8) 25%, #d4ff7d 50%, rgba(82,183,136,0.8) 75%, transparent 100%)",
+              background:
+                "linear-gradient(to right, transparent 0%, rgba(82,183,136,0.8) 25%, #d4ff7d 50%, rgba(82,183,136,0.8) 75%, transparent 100%)",
               animation: "glowPulse 2s ease-in-out infinite",
               position: "relative",
               zIndex: 1,
@@ -241,7 +252,14 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
             }}
           >
             <div>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.625rem", marginBottom: "1.25rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.625rem",
+                  marginBottom: "1.25rem",
+                }}
+              >
                 <div
                   style={{
                     width: "2.25rem",
@@ -280,7 +298,9 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                   lineHeight: 1.2,
                 }}
               >
-                {step === "credentials" ? "Welcome back" : "Secure Verification"}
+                {step === "credentials"
+                  ? "Welcome back"
+                  : "Secure Verification"}
               </h2>
               <p
                 style={{
@@ -327,9 +347,21 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
           </div>
 
           {/* Steps indicator */}
-          <div style={{ padding: "0 2rem 1.5rem 2rem", display: "flex", alignItems: "center", gap: "0.75rem", position: "relative", zIndex: 1 }}>
+          <div
+            style={{
+              padding: "0 2rem 1.5rem 2rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "0.75rem",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
             {["Credentials", "2FA Verification"].map((label, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <div
+                key={i}
+                style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+              >
                 <div
                   style={{
                     width: "1.5rem",
@@ -341,19 +373,25 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                     fontSize: "0.6rem",
                     fontFamily: "monospace",
                     fontWeight: "bold",
-                    background: (i === 0 && step === "credentials") || (i === 1 && step === "otp")
-                      ? "#d4ff7d"
-                      : i === 0 && step === "otp"
-                      ? "rgba(82,183,136,0.3)"
-                      : "rgba(82,183,136,0.1)",
-                    color: (i === 0 && step === "credentials") || (i === 1 && step === "otp")
-                      ? "#081c15"
-                      : i === 0 && step === "otp"
-                      ? "#52b788"
-                      : "rgba(82,183,136,0.5)",
-                    boxShadow: (i === 0 && step === "credentials") || (i === 1 && step === "otp")
-                      ? "0 0 20px rgba(212,255,125,0.4)"
-                      : "none",
+                    background:
+                      (i === 0 && step === "credentials") ||
+                      (i === 1 && step === "otp")
+                        ? "#d4ff7d"
+                        : i === 0 && step === "otp"
+                          ? "rgba(82,183,136,0.3)"
+                          : "rgba(82,183,136,0.1)",
+                    color:
+                      (i === 0 && step === "credentials") ||
+                      (i === 1 && step === "otp")
+                        ? "#081c15"
+                        : i === 0 && step === "otp"
+                          ? "#52b788"
+                          : "rgba(82,183,136,0.5)",
+                    boxShadow:
+                      (i === 0 && step === "credentials") ||
+                      (i === 1 && step === "otp")
+                        ? "0 0 20px rgba(212,255,125,0.4)"
+                        : "none",
                     transition: "all 0.3s ease",
                   }}
                 >
@@ -364,9 +402,11 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                     fontSize: "0.6rem",
                     letterSpacing: "0.06em",
                     fontFamily: "monospace",
-                    color: (i === 0 && step === "credentials") || (i === 1 && step === "otp")
-                      ? "#d4ff7d"
-                      : "rgba(82,183,136,0.5)",
+                    color:
+                      (i === 0 && step === "credentials") ||
+                      (i === 1 && step === "otp")
+                        ? "#d4ff7d"
+                        : "rgba(82,183,136,0.5)",
                   }}
                 >
                   {label}
@@ -377,9 +417,10 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                       width: "1.5rem",
                       height: "1px",
                       marginLeft: "0.25rem",
-                      background: step === "otp"
-                        ? "rgba(212,255,125,0.5)"
-                        : "rgba(82,183,136,0.2)",
+                      background:
+                        step === "otp"
+                          ? "rgba(212,255,125,0.5)"
+                          : "rgba(82,183,136,0.2)",
                       transition: "background 0.3s ease",
                     }}
                   />
@@ -395,7 +436,8 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                 margin: "0 2rem 1rem 2rem",
                 padding: "0.75rem 1rem",
                 borderRadius: "0.75rem",
-                background: "linear-gradient(135deg, rgba(212,255,125,0.08), rgba(82,183,136,0.04))",
+                background:
+                  "linear-gradient(135deg, rgba(212,255,125,0.08), rgba(82,183,136,0.04))",
                 border: "1px solid rgba(212,255,125,0.25)",
                 boxShadow: "0 0 20px rgba(212,255,125,0.1)",
                 position: "relative",
@@ -403,7 +445,14 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                 animation: "slideUp 0.3s ease-out",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.25rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  marginBottom: "0.25rem",
+                }}
+              >
                 <FiCpu size={10} style={{ color: "#d4ff7d" }} />
                 <p
                   style={{
@@ -435,7 +484,13 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
           )}
 
           {/* Form area */}
-          <div style={{ padding: "0 2rem 2rem 2rem", position: "relative", zIndex: 1 }}>
+          <div
+            style={{
+              padding: "0 2rem 2rem 2rem",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
             {message && !devOtp && (
               <div
                 style={{
@@ -453,20 +508,30 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                   animation: "slideUp 0.3s ease-out",
                 }}
               >
-                <FiCheck size={12} style={{ marginTop: "0.125rem", flexShrink: 0 }} />
+                <FiCheck
+                  size={12}
+                  style={{ marginTop: "0.125rem", flexShrink: 0 }}
+                />
                 {message}
               </div>
             )}
 
             {step === "credentials" ? (
-              <form onSubmit={handleCredentials} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              <form
+                onSubmit={handleCredentials}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
+                }}
+              >
                 <div>
                   <label
                     style={{
                       fontSize: "0.6rem",
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
-                      display: "block",
+
                       marginBottom: "0.5rem",
                       fontFamily: "monospace",
                       color: "rgba(82,183,136,0.8)",
@@ -485,7 +550,10 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                         left: "1rem",
                         top: "50%",
                         transform: "translateY(-50%)",
-                        color: focusedField === "email" ? "#d4ff7d" : "rgba(82,183,136,0.5)",
+                        color:
+                          focusedField === "email"
+                            ? "#d4ff7d"
+                            : "rgba(82,183,136,0.5)",
                         transition: "color 0.2s ease",
                         pointerEvents: "none",
                       }}
@@ -521,7 +589,7 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                       fontSize: "0.6rem",
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
-                      display: "block",
+
                       marginBottom: "0.5rem",
                       fontFamily: "monospace",
                       color: "rgba(82,183,136,0.8)",
@@ -540,7 +608,10 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                         left: "1rem",
                         top: "50%",
                         transform: "translateY(-50%)",
-                        color: focusedField === "password" ? "#d4ff7d" : "rgba(82,183,136,0.5)",
+                        color:
+                          focusedField === "password"
+                            ? "#d4ff7d"
+                            : "rgba(82,183,136,0.5)",
                         transition: "color 0.2s ease",
                         pointerEvents: "none",
                       }}
@@ -614,44 +685,62 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                     opacity: loading ? 0.5 : 1,
                     transition: "all 0.3s ease",
                     transform: "translateY(0)",
-                    boxShadow: loading ? "none" : "0 8px 30px rgba(212,255,125,0.3)",
+                    boxShadow: loading
+                      ? "none"
+                      : "0 8px 30px rgba(212,255,125,0.3)",
                     position: "relative",
                     overflow: "hidden",
                   }}
                   onMouseEnter={(e) => {
                     if (!loading) {
                       e.currentTarget.style.transform = "translateY(-2px)";
-                      e.currentTarget.style.boxShadow = "0 12px 40px rgba(212,255,125,0.4)";
+                      e.currentTarget.style.boxShadow =
+                        "0 12px 40px rgba(212,255,125,0.4)";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!loading) {
                       e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow = "0 8px 30px rgba(212,255,125,0.3)";
+                      e.currentTarget.style.boxShadow =
+                        "0 8px 30px rgba(212,255,125,0.3)";
                     }
                   }}
                 >
                   {loading ? (
                     <>
-                      <FiRefreshCw size={13} style={{ animation: "spin 1s linear infinite" }} />
+                      <FiRefreshCw
+                        size={13}
+                        style={{ animation: "spin 1s linear infinite" }}
+                      />
                       Sending Code...
                     </>
                   ) : (
                     <>
-                      Continue <FiArrowRight size={13} style={{ transition: "transform 0.2s ease" }} />
+                      Continue{" "}
+                      <FiArrowRight
+                        size={13}
+                        style={{ transition: "transform 0.2s ease" }}
+                      />
                     </>
                   )}
                 </button>
               </form>
             ) : (
-              <form onSubmit={handleOTP} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              <form
+                onSubmit={handleOTP}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1rem",
+                }}
+              >
                 <div>
                   <label
                     style={{
                       fontSize: "0.6rem",
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
-                      display: "block",
+
                       marginBottom: "0.5rem",
                       fontFamily: "monospace",
                       color: "rgba(82,183,136,0.8)",
@@ -666,7 +755,9 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                     <input
                       type="text"
                       value={otp}
-                      onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                      onChange={(e) =>
+                        setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))
+                      }
                       required
                       maxLength={6}
                       placeholder="000000"
@@ -689,7 +780,14 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                       }}
                     />
                   </div>
-                  <div style={{ display: "flex", gap: "0.375rem", marginTop: "0.75rem", padding: "0 0.125rem" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "0.375rem",
+                      marginTop: "0.75rem",
+                      padding: "0 0.125rem",
+                    }}
+                  >
                     {[0, 1, 2, 3, 4, 5].map((i) => (
                       <div
                         key={i}
@@ -697,8 +795,14 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                           flex: 1,
                           height: "4px",
                           borderRadius: "2px",
-                          background: otp.length > i ? "#d4ff7d" : "rgba(82,183,136,0.15)",
-                          boxShadow: otp.length > i ? "0 0 8px rgba(212,255,125,0.6)" : "none",
+                          background:
+                            otp.length > i
+                              ? "#d4ff7d"
+                              : "rgba(82,183,136,0.15)",
+                          boxShadow:
+                            otp.length > i
+                              ? "0 0 8px rgba(212,255,125,0.6)"
+                              : "none",
                           transition: "all 0.3s ease",
                         }}
                       />
@@ -742,7 +846,8 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                     background: "linear-gradient(135deg, #d4ff7d, #a8e063)",
                     color: "#081c15",
                     border: "none",
-                    cursor: loading || otp.length !== 6 ? "not-allowed" : "pointer",
+                    cursor:
+                      loading || otp.length !== 6 ? "not-allowed" : "pointer",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -750,24 +855,32 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
                     opacity: loading || otp.length !== 6 ? 0.5 : 1,
                     transition: "all 0.3s ease",
                     transform: "translateY(0)",
-                    boxShadow: loading || otp.length !== 6 ? "none" : "0 8px 30px rgba(212,255,125,0.3)",
+                    boxShadow:
+                      loading || otp.length !== 6
+                        ? "none"
+                        : "0 8px 30px rgba(212,255,125,0.3)",
                   }}
                   onMouseEnter={(e) => {
                     if (!loading && otp.length === 6) {
                       e.currentTarget.style.transform = "translateY(-2px)";
-                      e.currentTarget.style.boxShadow = "0 12px 40px rgba(212,255,125,0.4)";
+                      e.currentTarget.style.boxShadow =
+                        "0 12px 40px rgba(212,255,125,0.4)";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!loading && otp.length === 6) {
                       e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.boxShadow = "0 8px 30px rgba(212,255,125,0.3)";
+                      e.currentTarget.style.boxShadow =
+                        "0 8px 30px rgba(212,255,125,0.3)";
                     }
                   }}
                 >
                   {loading ? (
                     <>
-                      <FiRefreshCw size={13} style={{ animation: "spin 1s linear infinite" }} />
+                      <FiRefreshCw
+                        size={13}
+                        style={{ animation: "spin 1s linear infinite" }}
+                      />
                       Verifying...
                     </>
                   ) : (
@@ -818,7 +931,8 @@ export default function LoginModal({ onClose }: { onClose: () => void }) {
             style={{
               height: "1px",
               width: "100%",
-              background: "linear-gradient(to right, transparent, rgba(82,183,136,0.3), transparent)",
+              background:
+                "linear-gradient(to right, transparent, rgba(82,183,136,0.3), transparent)",
               animation: "glowPulse 3s ease-in-out infinite",
               position: "relative",
               zIndex: 1,

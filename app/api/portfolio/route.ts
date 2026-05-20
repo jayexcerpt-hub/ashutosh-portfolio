@@ -32,7 +32,7 @@ export async function PUT(req: NextRequest) {
   try {
     await connectDB();
     const data = await req.json();
-    let portfolio = await Portfolio.findOne({});
+    let portfolio = await Portfolio.findOne();
     if (!portfolio) {
       portfolio = await Portfolio.create(data);
     } else {

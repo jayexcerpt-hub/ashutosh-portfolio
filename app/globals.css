@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #081c15;
+  color: #fefae0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #081c15;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(82, 183, 136, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(82, 183, 136, 0.6);
+}
+
+/* Selection */
+::selection {
+  background: rgba(212, 255, 125, 0.2);
+  color: #d4ff7d;
+}
+
+/* Smooth scroll offset for fixed nav */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Range input accent */
+input[type="range"] {
+  accent-color: #d4ff7d;
+}

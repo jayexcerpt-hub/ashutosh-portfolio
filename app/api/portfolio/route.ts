@@ -14,7 +14,7 @@ async function isAdmin(req: NextRequest) {
 export async function GET() {
   try {
     await connectDB();
-    let portfolio = await Portfolio.findOne({});
+    let portfolio = await Portfolio.findOne();
     if (!portfolio) {
       portfolio = await Portfolio.create({});
     }

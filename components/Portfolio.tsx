@@ -5625,7 +5625,7 @@ export default function Portfolio() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 bg-[#52b788]/20 border border-[#52b788]/40 text-[#52b788] text-[11px] tracking-wide backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-4 py-2 mt-7 rounded-full mb-8 bg-[#52b788]/20 border border-[#52b788]/40 text-[#52b788] text-[11px] tracking-wide backdrop-blur-sm"
           >
             <EditText
               value={data.hero.tag}
